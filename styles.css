@@ -1,62 +1,58 @@
-body{
-    background-color: hsl(212, 45%, 89%);
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-family: 'Outfit', sans-serif;
 }
 
-.main-container{
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+:root{
+    --color-white:hsl(0, 0%, 100%);
+    --color-slate:hsl(212, 45%, 89%);
+    --color-secondary: hsl(220, 15%, 55%);
+    --color-primary: hsl(218, 44%, 22%);
+
+    --font-size-heading-1: 1.375rem;
+    --font-size-paragraph: 15px;
 }
+
+body{
+    background-color: var(--color-slate);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .card{
-    background-color: hsl(0, 0%, 100%);
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    /* margin-top: 15vh; */
     padding: 16px;
     border-radius: 20px;
-    max-width: 320px;
-    box-shadow: 0 25px 25px hsla(0, 0%, 0%, 0.164);
-    
+    box-shadow: 0 25px 25px rgb(0 0 0 / 4.77%);
+    background-color: var(--color-white);
+    width: 320px;
+    text-align: center;
 }
 
 h1{
-    font-size: 1.375rem;
+    font-size: var(--font-size-heading-1);
     font-weight: 700;
-    color: hsl(218, 44%, 22%);
-    /* padding-left: 20px;
-    padding-right: 20px; */
-    padding: 10px 15px 0 15px;
+    color: var(--color-primary);
+    margin-block: .67em;
+    /* border: 2px solid rgb(255, 59, 59); */
 }
+
+/* Look into adding margin-block to paragraph */
 p{
-    font-size: 0.938rem;
+    font-size: var(--font-size-paragraph);
     font-weight: 400;
-    color: hsl(220, 15%, 55%);
-    padding-left: 35px;
-    padding-right: 35px;
-}
-
-h1, p{
-    text-align: center;
-
+    color: var(--color-secondary);
+    /* border: 2px solid rgb(59, 92, 255); */
+    margin-block: 1em;
 }
 
 img{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-    width: 100%;
+    width: 288px;
+    height: 288px;
+    align-self: center;
 }
-
-/* Footer content */
-
-.attribution-container{
-    display: block; 
-    /* margin-top: 50px; 
-    margin-bottom: 50px; */
-    min-height: 10vh;
-}
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
